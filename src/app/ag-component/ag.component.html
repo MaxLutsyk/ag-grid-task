@@ -1,0 +1,15 @@
+<div>
+  <span>Total rows: {{totalRows}} </span>
+  <button (click)="showCheckboxesFunc()">show checkboxes</button>
+  <span> Total selected rows: {{selectedRows}}</span>
+</div>
+<ag-grid-angular style="width: 100%; height: 1000px" class="ag-theme-balham"
+                 [gridOptions]="gridOptions" [enableSorting]="true"
+                 [frameworkComponents]="frameworkComponents"
+                 [suppressMovableColumns]="true"
+                 [rowSelection]="rowSelection"
+                 [suppressRowClickSelection]="suppressRowClickSelection"
+                 [getContextMenuItems]="getContextMenuItems"
+                 (selectionChanged)="onSelectionChanged($event)">
+</ag-grid-angular>
+

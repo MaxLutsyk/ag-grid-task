@@ -1,0 +1,4 @@
+<div *ngIf="params">
+  <div class="customHeaderLabel" *ngIf="params.displayName != 'checkbox'">{{params.displayName}}</div>
+  <div class="customHeaderLabel" *ngIf="params.displayName == 'checkbox'" (click)="selectAll();"><input type="checkbox" [checked]="isAllSelected"></div>
+</div>
